@@ -10,9 +10,8 @@ guessed_word = []
 for n in range(0 , len(choosen_word)):
     guessed_word += '_'
 print(logo)
-print(choosen_word)
 while '_' in guessed_word and lives > 0:
-    guess = input("Type a letter: c").lower()
+    guess = input("Type a letter: ").lower()
     if guess in choosen_word:
         for n in range(0 , len(choosen_word)):
             if choosen_word[n] == guess:
@@ -26,5 +25,6 @@ while '_' in guessed_word and lives > 0:
 
 if '_' in guessed_word:
     print(loose)
+    print("The word was: " , choosen_word)
 else:
     print(win)
